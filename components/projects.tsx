@@ -113,7 +113,7 @@ const otherProjects = [
     description:
       "a lightweight and fun typing test game designed to help users improve their typing speed and accuracy",
     tags: ["react", "typescript", "vite", "tailwindcss"],
-    url: "https://nitr0typer.vercel.app/",
+    url: "https://nitr0-typer.vercel.app/",
   },
   {
     title: "CSV Parser",
