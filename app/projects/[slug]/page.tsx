@@ -326,7 +326,7 @@ const projectsData = {
   },
   "global-countries-quiz": {
     title: "Global Countries Quiz",
-    subtitle: "Test Your Knowledge of World Geography",
+    subtitle: "Test Your Knowledge of World Geography in 15 Minutes!",
     description:
       "A fun and interactive quiz app that challenges users to identify countries...",
     image: "/CountriesQuiz.jpeg",
