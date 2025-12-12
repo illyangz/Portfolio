@@ -188,7 +188,7 @@ const projectsData = {
     subtitle: "Financial Data Monitoring & Analysis",
     description:
       "A Discord server dedicated to financial data monitoring and analysis. MarketFlow scans market data in real-time to provide insights and facilitate informed financial discussions within our community.",
-    image: "/marketflow.jpeg",
+    image: "/MarketFlow.jpeg",
     tags: [
       "golang",
       "python",
@@ -327,7 +327,11 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const project = projectsData[slug as keyof typeof projectsData];
 
