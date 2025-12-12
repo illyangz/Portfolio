@@ -6,6 +6,21 @@ import { title } from "process";
 
 const highlightProjects = [
   {
+    title: "Global Countries Quiz",
+    description:
+      "Can you name all the countries in the world? Test your geography knowledge with this interactive quiz!",
+    tags: [
+      "react",
+      "typescript",
+      "nextjs",
+      "railway",
+      "postgresql",
+      "tailwindcss",
+      "framer-motion",
+    ],
+    url: "/projects/global-countries-quiz",
+  },
+  {
     title: "N8N Leads Scraper",
     description:
       "1000 Free Leads/Month - Automated lead generation system built with N8N workflows",

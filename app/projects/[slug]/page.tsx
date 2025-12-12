@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { notFound } from "next/navigation";
 import { Navigation } from "@/components/navigation";
@@ -13,6 +13,7 @@ const projectsData = {
     description:
       "Imagine generating 1000 free leads every single month, tailored to your exact needs, and ready for action. What if this powerful lead generation system was incredibly fast, ridiculously easy to set up, and infinitely customizable? Stop dreaming, start doing. This N8N workflow generates leads on steroids – the ultimate lead scraping and enrichment workflow.",
     image: "/n8ndemo.png",
+    images: undefined,
     tags: [
       "node.js",
       "http",
@@ -83,6 +84,7 @@ const projectsData = {
     description:
       "An AI powered and fine tuned on Donald Trump tweets that uses advanced language models to create authentic and interesting conversations. Engage in real-time conversations with an AI that captures Trump's unique communication style and personality.",
     image: "/trumpgptsolscan.jpeg",
+    images: undefined,
     tags: [
       "$170K ATH marketcap",
       "solana",
@@ -139,6 +141,7 @@ const projectsData = {
     description:
       "Name is self-explanatory; it's like ChatGPT or Claude, but formatted on documents, PDFs, text files, markdown, etc. Chat with PDFs allows you to have intelligent conversations with your documents using AI.",
     image: "/chatwithpdfsdemo.mp4",
+    images: undefined,
     tags: [
       "typescript",
       "pinecone",
@@ -189,6 +192,7 @@ const projectsData = {
     description:
       "A Discord server dedicated to financial data monitoring and analysis. MarketFlow scans market data in real-time to provide insights and facilitate informed financial discussions within our community.",
     image: "/MarketFlow.jpeg",
+    images: undefined,
     tags: [
       "golang",
       "python",
@@ -246,6 +250,7 @@ const projectsData = {
     description:
       "I was speaking with a friend about having some kind of app to monitor gas prices throughout the year, but moreso throughout shorter time periods, study their patterns in hopes of analyzing gas prices across locations. And I took matters into my own hands to get my friends their optimum gas stations after reading a reddit thread of how someone programmed their home assistant to monitor gas prices.",
     image: "/rusty-prices.mp4",
+    images: undefined,
     tags: ["rust", "graphql", "reqwest", "serde", "tokio", "data analysis"],
     liveUrl: undefined,
     sections: [
@@ -319,6 +324,56 @@ const projectsData = {
       "Comprehensive data analysis and visualization",
     ],
   },
+  "global-countries-quiz": {
+    title: "Global Countries Quiz",
+    subtitle: "Test Your Knowledge of World Geography",
+    description:
+      "A fun and interactive quiz app that challenges users to identify countries...",
+    image: "/CountriesQuiz.jpeg",
+    images: ["/CountriesQuiz.jpeg", "/CountriesQuiz(1).jpeg"],
+    tags: [
+      "react",
+      "typescript",
+      "nextjs",
+      "railway",
+      "postgresql",
+      "tailwindcss",
+      "framer-motion",
+    ],
+    liveUrl: "https://global-guess-quiz-production.up.railway.app/",
+    sections: [
+      {
+        title: "Tech Stack",
+        content: [
+          "Frontend: React, Next.js",
+          "Styling: TailwindCSS, Framer Motion",
+        ],
+      },
+      {
+        title: "Key Features",
+        content: [
+          "Multiple quiz modes",
+          "Timed challenges",
+          "Responsive design",
+          "Leaderboard",
+        ],
+      },
+      {
+        title: "Development Process",
+        content: [
+          "Focused on smooth animations",
+          "Efficient state management",
+          "Accessibility and responsiveness",
+        ],
+      },
+    ],
+    features: [
+      "Engaging geography quizzes",
+      "Smooth animations",
+      "Responsive design",
+      "Leaderboard features",
+    ],
+  },
 };
 
 export function generateStaticParams() {
@@ -388,7 +443,30 @@ export default async function ProjectPage({
 
         {/* Project Image/Video */}
         <div className="rounded-lg overflow-hidden border border-border">
-          {project.image?.endsWith(".mp4") ? (
+          {project.images ? (
+            <div className="space-y-4">
+              {project.images.map((media, index) =>
+                media.endsWith(".mp4") ? (
+                  <video
+                    key={index}
+                    src={media}
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    className="w-full rounded-lg"
+                  />
+                ) : (
+                  <img
+                    key={index}
+                    src={media}
+                    alt={`${project.title} screenshot ${index + 1}`}
+                    className="w-full rounded-lg"
+                  />
+                )
+              )}
+            </div>
+          ) : project.image?.endsWith(".mp4") ? (
             <video
               src={project.image}
               controls
@@ -396,15 +474,9 @@ export default async function ProjectPage({
               loop
               muted
               className="w-full"
-            >
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <img
-              src={project.image || "/placeholder.svg"}
-              alt={project.title}
-              className="w-full"
             />
+          ) : (
+            <img src={project.image} alt={project.title} className="w-full" />
           )}
         </div>
 
