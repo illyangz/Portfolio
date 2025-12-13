@@ -340,7 +340,7 @@ const projectsData = {
       "tailwindcss",
       "framer-motion",
     ],
-    liveUrl: "https://global-guess-quiz-production.up.railway.app/",
+    liveUrl: "https://globalcountriesquiz.up.railway.app/",
     sections: [
       {
         title: "Tech Stack",
