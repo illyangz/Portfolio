@@ -374,6 +374,59 @@ const projectsData = {
       "Leaderboard features",
     ],
   },
+  leadsouq: {
+    title: "LeadSouq",
+    subtitle: "AI-Powered B2B Lead Generation Platform",
+    description:
+      "LeadSouq is an AI-driven B2B lead generation platform that helps businesses find and connect with potential clients more efficiently. By leveraging advanced algorithms and data analytics, LeadSouq identifies high-quality leads tailored to specific business needs.",
+    image: "/leadsouqdemo.mp4",
+    images: undefined,
+    tags: [
+      "golang",
+      "typescript",
+      "nextjs",
+      "railway",
+      "scylladb",
+      "redis",
+      "tailwindcss",
+      "framer-motion",
+    ],
+    liveUrl: undefined,
+    sections: [
+      {
+        title: "Tech Stack",
+        content: [
+          "Backend: Go, ScyllaDB, Redis",
+          "Frontend: Next.js, TypeScript, TailwindCSS",
+          "Deployment: Railway",
+        ],
+      },
+      {
+        title: "Key Features",
+        content: [
+          "AI-driven lead identification",
+          "Customizable lead criteria",
+          "User-friendly interface",
+        ],
+      },
+      {
+        title: "Development Process",
+        content: [
+          "Focused on building a scalable backend",
+          "Designed an intuitive frontend experience",
+          "Integrated AI algorithms for lead generation",
+        ],
+      },
+    ],
+    features: [
+      "34 Million+ business profiles",
+      "Customizable search criteria",
+      "AI-driven lead scoring",
+      "Real-time lead updates",
+      "User-friendly dashboard",
+      "Credit based system for lead access and export",
+    ],
+  },
 };
 
 export function generateStaticParams() {
@@ -435,7 +488,7 @@ export default async function ProjectPage({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 text-accent-foreground rounded-lg transition-colors font-medium bg-accent hover:bg-accent/90 text-lg"
             >
-              View Live Project
+              Visit Live Project
               <ExternalLink className="w-4 h-4" />
             </a>
           )}
@@ -496,7 +549,7 @@ export default async function ProjectPage({
                     key={itemIndex}
                     className="text-muted-foreground leading-relaxed flex gap-3"
                   >
-                    <span className="text-accent mt-1.5">•</span>
+                    <span className="text-accent">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -515,7 +568,7 @@ export default async function ProjectPage({
                   key={index}
                   className="text-muted-foreground leading-relaxed flex gap-3"
                 >
-                  <span className="text-accent mt-1.5">•</span>
+                  <span className="text-accent">•</span>
                   <span>{feature}</span>
                 </li>
               ))}
@@ -530,10 +583,10 @@ export default async function ProjectPage({
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors font-medium text-lg"
+              className="inline-flex items-center gap-2 px-6 py-3 text-accent-foreground rounded-lg transition-colors font-medium bg-accent hover:bg-accent/90 text-lg"
             >
-              Visit Project
-              <ExternalLink className="w-5 h-5" />
+              Visit Live Project
+              <ExternalLink className="w-4 h-4" />
             </a>
           </div>
         )}

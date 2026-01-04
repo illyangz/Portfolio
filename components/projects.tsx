@@ -6,6 +6,23 @@ import { title } from "process";
 
 const highlightProjects = [
   {
+    title: "LeadSouq",
+    description:
+      "LeadSouq is a lead generation platform that helps businesses find and connect with potential customers.",
+    tags: [
+      "golang",
+      "typescript",
+      "nextjs",
+      "railway",
+      "scylladb",
+      "redis",
+      "tailwindcss",
+      "framer-motion",
+    ],
+    url: "/projects/leadsouq",
+  },
+
+  {
     title: "Global Countries Quiz",
     description:
       "Can you name all the countries in the world? Test your geography knowledge with this interactive quiz!",

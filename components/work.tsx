@@ -73,7 +73,7 @@ export function Work() {
 
       <div className="pt-4">
         <a
-          href="/docs/HassanMango'sCV.pdf"
+          href="/docs/CVHassanMango.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm text-accent hover:underline"

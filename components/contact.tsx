@@ -16,6 +16,22 @@ export function Contact() {
 
       <div className="flex flex-col gap-3 text-sm">
         <a
+          href="https://buymeacoffee.com/hassanmango"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm text-foreground hover:text-accent transition-colors group"
+        >
+          <Image
+            src="/Taco Icon.png"
+            alt="Buy me a taco"
+            width={16}
+            height={16}
+            className="object-contain"
+          />
+
+          <span className="group-hover:underline">Buy me a 🌮</span>
+        </a>
+        <a
           href="mailto:hmango77@gmail.com"
           className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group"
         >
@@ -69,22 +85,6 @@ export function Contact() {
         >
           <FaXTwitter className="w-4 h-4" />
           x.com/illyangz
-        </a>
-        <a
-          href="https://buymeacoffee.com/hassanmango"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm text-foreground hover:text-accent transition-colors group"
-        >
-          <Image
-            src="/Taco Icon.png"
-            alt="Buy me a taco"
-            width={16}
-            height={16}
-            className="object-contain"
-          />
-
-          <span className="group-hover:underline">Buy me a 🌮</span>
         </a>
       </div>
 
