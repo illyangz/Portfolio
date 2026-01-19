@@ -22,15 +22,16 @@ export function Contact() {
           className="inline-flex items-center gap-2 text-sm text-foreground hover:text-accent transition-colors group"
         >
           <Image
-            src="/Taco Icon.png"
+            src="/taco-vector.svg"
             alt="Buy me a taco"
-            width={16}
-            height={16}
-            className="object-contain"
+            width={20}
+            height={20}
+            className="object-contain dark:invert"
           />
 
           <span className="group-hover:underline">Buy me a 🌮</span>
         </a>
+
         <a
           href="mailto:hmango77@gmail.com"
           className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group"
