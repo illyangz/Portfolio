@@ -1,7 +1,7 @@
 import type React from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -132,10 +132,15 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="3c4a3c0d-18f6-46c6-86b9-84cd45e617c2"
+          strategy="afterInteractive"
+        />
       </head>
       <body className={`font-mono antialiased`}>
         {children}
-        <Analytics />
       </body>
     </html>
   );
