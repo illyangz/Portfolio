@@ -490,7 +490,7 @@ export default async function ProjectPage({
             </div>
 
             {/* Key Features (center, emphasized - spans 2 cols) */}
-            <div className="rounded-xl border border-border/60 bg-muted/40 p-5 space-y-4 md:col-span-2 hover:shadow-sm transition-shadow">
+            <div className="rounded-xl border border-border/60 bg-muted/30 p-5 space-y-4 md:col-span-2 hover:shadow-sm transition-shadow">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-accent" />
                 <h3 className="text-base font-semibold tracking-tight">
@@ -508,7 +508,7 @@ export default async function ProjectPage({
             </div>
 
             {/* Dev Process (spans 2 cols) */}
-            <div className="md:col-span-2 rounded-xl border border-border/60 bg-muted/20 p-5 space-y-4 hover:shadow-sm transition-shadow">
+            <div className="md:col-span-2 rounded-xl border border-border/30 bg-muted/20 p-5 space-y-4 hover:shadow-sm transition-shadow">
               <div className="flex items-center gap-2">
                 <Wrench className="w-4 h-4 text-accent" />
                 <h3 className="text-base font-semibold tracking-tight">
