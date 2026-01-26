@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import {
+  ArrowLeft,
+  ExternalLink,
+  Cpu,
+  Sparkles,
+  Wrench,
+  Star,
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { notFound } from "next/navigation";
 import { Navigation } from "@/components/navigation";
@@ -8,10 +15,9 @@ import { Contact } from "@/components/contact";
 const projectsData = {
   "n8n-leads-scraper": {
     title: "N8N Leads Scraper",
-    subtitle:
-      "Unlock a Flood of Perfect Leads: Supercharge Your Outreach with N8N Leads On Steroids!",
+    subtitle: "Automated Google Maps Lead Scraping & Enrichment",
     description:
-      "Imagine generating 1000 free leads every single month, tailored to your exact needs, and ready for action. What if this powerful lead generation system was incredibly fast, ridiculously easy to set up, and infinitely customizable? Stop dreaming, start doing. This N8N workflow generates leads on steroids – the ultimate lead scraping and enrichment workflow.",
+      "A high-performance N8N workflow for scraping and enriching business leads from Google Maps. Designed for speed, customization, and scale, with built-in enrichment and scoring.",
     image: "/n8ndemo.png",
     images: undefined,
     tags: [
@@ -25,41 +31,26 @@ const projectsData = {
       "google-maps",
     ],
     liveUrl: "https://buy.stripe.com/fZucN6810fKnaEc5LyfnO03",
+    techStack: [
+      "N8N Automation",
+      "RapidAPI (MapsData)",
+      "Google Sheets Export",
+      "HTTP / REST APIs",
+      "Node.js",
+    ],
+    keyFeatures: [
+      "1,000 free leads per month",
+      "Google Maps business scraping",
+      "Custom scoring & enrichment logic",
+      "Custom pentesting scores according to lead's security posture and tech stack",
+    ],
+    devProcess: [
+      "Optimized for fast batch scraping",
+      "Supports 150+ countries",
+      "Fully modular workflow",
+      "Extensive testing & validation",
+    ],
     sections: [
-      {
-        title: "What kinds of leads can you generate?",
-        content: [
-          "Businesses from Google Maps based on your search criteria",
-          "Enriched with websites, contact info, social media links",
-          "Additional data like ratings, reviews, and more",
-          "Custom pentesting scores and security opportunity levels",
-          "Limits and Usage: 1000 Free Requests with a RapidApi MapsData API Key",
-        ],
-      },
-      {
-        title: "Get Your Competitive Edge for Just $49.99!",
-        content: [
-          "One-time purchase of $49.99 for the complete N8N workflow",
-          "Instant download of the JSON file to import into your N8N instance",
-          "Unlimited use – generate as many leads as you need, whenever you want",
-          "Free updates – get access to any improvements or new features added in the future",
-          "Dedicated support – help to get the most out of your workflow",
-        ],
-      },
-      {
-        title: "Leads on Steroids pt.1",
-        content: [
-          "This workflow is built for speed. Getting crucial business data like websites, business names, addresses, ratings, reviews, and even pentesting scores.",
-          'Integrated custom logic that analyzes each business and assigns a "pentesting score" and "security opportunity" level. Identify high-priority cybersecurity leads with unprecedented accuracy.',
-        ],
-      },
-      {
-        title: "Leads on Steroids pt.2",
-        content: [
-          "Beyond basic lead scraping, this workflow enriches your leads with valuable data points like website URLs, contact info, social media links, and more. This means you get a comprehensive view of each prospect right from the start.",
-          "The best part? It's fully customizable. Tailor the workflow to fit your unique lead generation needs and watch your outreach efforts skyrocket.",
-        ],
-      },
       {
         title: "Deep Customization at Your Fingertips",
         content: [
@@ -72,17 +63,16 @@ const projectsData = {
       },
     ],
     features: [
-      "Save Time and Effort: Automate the tedious process of lead scraping and enrichment",
-      "Boost Outreach Effectiveness: Get high-quality, enriched leads that convert better",
-      "Stay Ahead of the Competition: Leverage advanced filtering and scoring to target the best prospects",
-      "Scale Your Lead Generation: Easily adjust parameters to ramp up lead volume as needed",
+      "Save Time and Effort",
+      "Boost Outreach Effectiveness",
+      "Scale Your Lead Generation",
     ],
   },
   "trump-gpt": {
     title: "Trump GPT",
     subtitle: "Memecoin Project - AI Powered Chat Experience",
     description:
-      "An AI powered and fine tuned on Donald Trump tweets that uses advanced language models to create authentic and interesting conversations. Engage in real-time conversations with an AI that captures Trump's unique communication style and personality.",
+      "An AI chat experience launched as a memecoin project & fine-tuned on Donald Trump’s communication style, enabling real-time, character-accurate conversations.",
     image: "/trumpgptsolscan.jpeg",
     images: undefined,
     tags: [
@@ -94,46 +84,26 @@ const projectsData = {
       "react",
     ],
     liveUrl: "https://www.trumpgpt.meme/",
+    techStack: ["Next.js & React", "Node.js & Express", "OpenAI API"],
+    keyFeatures: [
+      "Dynamic response generation",
+      "Context-aware conversations",
+      "Mobile-responsive design",
+    ],
+    devProcess: [
+      "Iterative prompt engineering",
+      "Character consistency testing",
+      "Latency & performance optimization",
+    ],
     sections: [
-      {
-        title: "Advanced Tech Stack",
-        content: [
-          "Next.js & React for frontend",
-          "Node.js & Express backend",
-          "OpenAI GPT-4 Integration",
-          "TailwindCSS for styling",
-          "Vercel for deployment",
-        ],
-      },
-      {
-        title: "Key Features",
-        content: [
-          "Real-time conversation with Trump AI",
-          "Dynamic response generation",
-          "Character-accurate interactions",
-          "Mobile-responsive design",
-          "Fast response times",
-        ],
-      },
       {
         title: "AI Personality",
         content: [
-          "The AI is carefully tuned to replicate Trump's unique communication style, including his signature phrases, speech patterns, and tweet format. It understands context and can engage in conversations while maintaining character authenticity.",
-        ],
-      },
-      {
-        title: "Development Process",
-        content: [
-          "Trump GPT was built to provide an entertaining and interactive AI experience that captures Donald Trump's unique communication style. The system was developed iteratively, focusing on fine-tuning the AI responses to match Trump's characteristic patterns, phrases, and mannerisms.",
+          "The AI is carefully trained to replicate Trump's unique communication style, including his signature phrases, speech patterns, and tweet format. It understands context and can engage in conversations while maintaining character authenticity.",
         ],
       },
     ],
-    features: [
-      "Advanced prompt engineering to capture Trump's speaking style",
-      "Real-time response generation using GPT-4",
-      "Context-aware conversations that maintain character consistency",
-      "User-friendly interface for natural interactions",
-    ],
+    features: ["Advanced prompt engineering", "Fast response times"],
   },
   "chat-with-pdfs": {
     title: "Chat with PDFs",
@@ -151,16 +121,28 @@ const projectsData = {
       "tailwindcss",
     ],
     liveUrl: "https://github.com/illyangz/chat-with-pdf",
+    techStack: [
+      "TypeScript",
+      "Next.js & React",
+      "Pinecone Vector DB",
+      "Clerk Authentication",
+      "TailwindCSS",
+    ],
+    keyFeatures: [
+      "Supports multiple document formats",
+      "Accurate language parsing",
+      "Optimized for responsive, cost-effective performance",
+      "LTR & RTL text support",
+    ],
+    devProcess: [
+      "Implemented vector-based retrieval with Pinecone",
+      "Optimized OpenAI API usage for cost efficiency",
+      "Handled bidirectional text and Arabic shaping",
+      "Built role-based authentication flows",
+      "Used fonts designed for multilingual support",
+      "Ensured all text elements had the correct dir attribute",
+    ],
     sections: [
-      {
-        title: "Tech Stack",
-        content: [
-          "Framer-Motion, TypeScript, TailwindCSS",
-          "OpenAI API Integration",
-          "Pinecone Vectorization",
-          "Vercel for hosting, Clerk for authentication",
-        ],
-      },
       {
         title: "Development Challenges",
         content: [
@@ -173,17 +155,14 @@ const projectsData = {
         content: [
           "Character Shaping (Contextual Forms): Arabic requires shaping letters based on their position within a word",
           "Bidirectional (Bidi) Text Handling: Mixed LTR and RTL text needs proper Unicode and CSS properties",
-          "Direction Attribute: Ensured all text elements had the correct dir attribute",
-          "Font Selection: Chose fonts designed for multilingual support",
         ],
       },
     ],
     features: [
-      "Supports LTR and RTL text with precise letter shaping",
-      "Context-aware responses powered by OpenAI and Pinecone",
-      "Supports multiple document formats",
-      "Accurate language parsing",
-      "Optimized for responsive, cost-effective performance",
+      "Vector-based document querying",
+      "Multilingual text handling",
+      "Cost-optimized inference",
+      "Secure user access",
     ],
   },
   marketflow: {
@@ -203,16 +182,26 @@ const projectsData = {
       "alpaca",
     ],
     liveUrl: "https://mf-frontend-production.up.railway.app/",
+    techStack: [
+      "Go & Python Backend",
+      "React & TypeScript Frontend",
+      "Discord Integration",
+      "Multiple Financial APIs",
+    ],
+    keyFeatures: [
+      "Market data scanning and monitoring",
+      "AI-powered market insights and trend analysis",
+      "Custom alerts for significant market movements",
+      "Community-driven discussion channels",
+      "Congress Member Tracker with trade lookups and notifications",
+    ],
+    devProcess: [
+      "Learned Go while building production services",
+      "Reverse-engineered financial APIs",
+      "Built real-time data pipelines",
+      "Monitoring dashboard for system health",
+    ],
     sections: [
-      {
-        title: "Tech Stack",
-        content: [
-          "Backend: Go, Python",
-          "Frontend: HTML, React, Typescript",
-          "Discord packages",
-          "Multiple financial APIs, monitors and scrapers",
-        ],
-      },
       {
         title: "AI Integration",
         content: [
@@ -226,62 +215,48 @@ const projectsData = {
           "Some challenges faced included having to learn Go while building this and working on Python license. However, it actually helped reverse engineer APIs and improve data handling with live streaming and time series data.",
         ],
       },
-      {
-        title: "Development Process",
-        content: [
-          "The development focuses on creating efficient data pipelines and meaningful visualizations to help users understand market trends and movements.",
-          "Created a congress member trading tracker with a dashboard for monitor health and status checks.",
-          "Slash commands for stock ticker lookups, which chart candlesticks on demand.",
-          "News feed for administered events, tickers, political members, companies.",
-        ],
-      },
     ],
     features: [
-      "Real-time market data scanning and monitoring",
-      "AI-powered market insights and trend analysis",
-      "Custom alerts for significant market movements",
-      "Community-driven discussion channels",
-      "Congress Member Tracker with trade lookups and notifications",
+      "Candlestick charting",
+      "Custom news feeds",
+      "Websocket powered data streaming",
     ],
   },
   "rusty-gas-prices": {
     title: "Rusty Gas Prices",
     subtitle: "Gas Price Monitoring & Pattern Analysis System",
     description:
-      "I was speaking with a friend about having some kind of app to monitor gas prices throughout the year, but moreso throughout shorter time periods, study their patterns in hopes of analyzing gas prices across locations. And I took matters into my own hands to get my friends their optimum gas stations after reading a reddit thread of how someone programmed their home assistant to monitor gas prices.",
+      "I was speaking with a friend about having some kind of app to monitor gas prices throughout the year, but moreso throughout shorter time periods, study their patterns in hopes of analyzing gas prices across locations. And I took matters into my own hands to get my friends their optimal gas stations after reading a reddit thread of how someone programmed their home assistant to monitor gas prices.",
     image: "/rusty-prices.mp4",
     images: undefined,
     tags: ["rust", "graphql", "reqwest", "serde", "tokio", "data analysis"],
     liveUrl: undefined,
+    techStack: [
+      "Rust",
+      "GraphQL",
+      "Reqwest HTTP Client",
+      "Serde JSON Parsing",
+      "Tokio Async Runtime",
+    ],
+    keyFeatures: [
+      "Real-time gas price monitoring across US locations",
+      "Location-based retrieval with zipcode support",
+      "Fuel type comparison (cash vs credit pricing)",
+      "Home assistant integration with visual alerts",
+    ],
+    devProcess: [
+      "Nationwide gas price aggregation",
+      "Pattern detection and forecasting",
+      "Handled large JSON datasets",
+      "Implemented efficient location-based queries to fetch gas station information",
+      "Preparing native app integration",
+    ],
     sections: [
-      {
-        title: "Tech Stack",
-        content: [
-          "Rust programming language for performance and safety",
-          "Reqwest HTTP Client for API requests",
-          "GraphQL API with Apollo Server",
-          "Serde for JSON parsing",
-          "Tokio for asynchronous runtime",
-          "GasBuddy API integration",
-        ],
-      },
       {
         title: "Challenges",
         content: [
           "Handling complex API responses and identifying reliable fuel price data",
-          "Managing large JSON structures across multiple cities",
           "Started with small cities in IL, expanded to support any city in the USA or valid zipcode",
-          "Built to be compatible with any valid US zipcode",
-          "Nearly 2GB of storage required for the project data",
-        ],
-      },
-      {
-        title: "API Integration",
-        content: [
-          "Set up GraphQL API using Apollo Server to integrate with GasBuddy API",
-          "Fetches gas station data based on user searches",
-          "Created functions to parse payload for better user understanding",
-          "Built comparison functions for analyzing gas station statistics",
         ],
       },
       {
@@ -289,46 +264,21 @@ const projectsData = {
         content: [
           "Home assistant integration with visual alerts (green for cheap, red for expensive)",
           "Pattern detection to forecast future prices",
-          "Location-based gas station data retrieval",
           "Price analysis for cheapest and most expensive stations",
-          "Fuel type categorization (cash and credit)",
-          "Trends visualization and insights",
-        ],
-      },
-      {
-        title: "Technical Decisions",
-        content: [
-          "Leveraged Rust for strong type safety and efficient performance in networked applications",
-          "Used Reqwest for HTTP requests and Serde for JSON handling",
-          "Defined GasStation schema with fields like name, address, and price",
-          "Resolvers process search parameters like location or fuel type",
-          "Streamlined retrieval of precise, filtered gas station information through structured GraphQL queries",
-        ],
-      },
-      {
-        title: "Development Process",
-        content: [
-          "Built using Rust for performance and safety",
-          "Scraper utilizes the GasBuddy GraphQL API to fetch and process gas price data efficiently",
-          "Working on converting to a native app due to storage requirements",
-          "Future plans include enhanced pattern detection and predictive analytics",
         ],
       },
     ],
     features: [
-      "Real-time gas price monitoring across US locations",
-      "Smart pattern detection for price forecasting",
-      "Location-based retrieval with zipcode support",
-      "Fuel type comparison (cash vs credit pricing)",
-      "Home assistant integration with visual alerts",
-      "Comprehensive data analysis and visualization",
+      "Price & location polling",
+      "Nearly 2GB of structured storage",
+      "Zip code-based queries",
     ],
   },
   "global-countries-quiz": {
     title: "Global Countries Quiz",
     subtitle: "Test Your Knowledge of World Geography in 15 Minutes!",
     description:
-      "A fun and interactive quiz app that challenges users to identify countries...",
+      "A fun and interactive quiz app that challenges users to identify countries from around the world. Test your geography knowledge with timed challenges and compete on the global leaderboard.",
     image: "/CountriesQuiz.jpeg",
     images: ["/CountriesQuiz.jpeg", "/CountriesQuiz(1).jpeg"],
     tags: [
@@ -341,44 +291,38 @@ const projectsData = {
       "framer-motion",
     ],
     liveUrl: "https://globalcountriesquiz.up.railway.app/",
-    sections: [
-      {
-        title: "Tech Stack",
-        content: [
-          "Frontend: React, Next.js",
-          "Styling: TailwindCSS, Framer Motion",
-        ],
-      },
-      {
-        title: "Key Features",
-        content: [
-          "Multiple quiz modes",
-          "Timed challenges",
-          "Responsive design",
-          "Leaderboard",
-        ],
-      },
-      {
-        title: "Development Process",
-        content: [
-          "Focused on smooth animations",
-          "Efficient state management",
-          "Accessibility and responsiveness",
-        ],
-      },
+    techStack: [
+      "React & Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "TailwindCSS",
+      "Framer Motion",
     ],
+    keyFeatures: [
+      "Timed geography quiz",
+      "Global leaderboard",
+      "Over 200 countries & territories",
+      "Custom SVG map",
+      "Show answers feature",
+    ],
+    devProcess: [
+      "Smooth animation focus",
+      "Efficient state management",
+      "Performance tuning",
+      "Database schema design for difficulties and scores",
+    ],
+    sections: [],
     features: [
-      "Engaging geography quizzes",
-      "Smooth animations",
-      "Responsive design",
+      "Engaging geography quiz",
       "Leaderboard features",
+      "Responsive design",
     ],
   },
   leadsouq: {
     title: "LeadSouq",
     subtitle: "AI-Powered B2B Lead Generation Platform",
     description:
-      "LeadSouq is an AI-driven B2B lead generation platform that helps businesses find and connect with potential clients more efficiently. By leveraging advanced algorithms and data analytics, LeadSouq identifies high-quality leads tailored to specific business needs.",
+      "LeadSouq is an AI-driven B2B lead generation platform that provides businesses with access to over 34 million business profiles.",
     image: "/leadsouqdemo-compressed.mp4",
     images: undefined,
     tags: [
@@ -392,39 +336,34 @@ const projectsData = {
       "framer-motion",
     ],
     liveUrl: undefined,
-    sections: [
-      {
-        title: "Tech Stack",
-        content: [
-          "Backend: Go, ScyllaDB, Redis",
-          "Frontend: Next.js, TypeScript, TailwindCSS",
-          "Deployment: Railway",
-        ],
-      },
-      {
-        title: "Key Features",
-        content: [
-          "AI-driven lead identification",
-          "Customizable lead criteria",
-          "User-friendly interface",
-        ],
-      },
-      {
-        title: "Development Process",
-        content: [
-          "Focused on building a scalable backend",
-          "Designed an intuitive frontend experience",
-          "Integrated AI algorithms for lead generation",
-        ],
-      },
+    techStack: [
+      "Golang",
+      "Redis",
+      "ScyllaDB",
+      "Next.js & TypeScript",
+      "TailwindCSS",
+      "Railway",
     ],
-    features: [
-      "34 Million+ business profiles",
-      "Customizable search criteria",
+    keyFeatures: [
+      "34M+ business profiles",
       "AI-driven lead scoring",
-      "Real-time lead updates",
-      "User-friendly dashboard",
+      "Customizable search",
       "Credit based system for lead access and export",
+      "User-friendly dashboard",
+      "Middle East and North Africa regional focus",
+    ],
+    devProcess: [
+      "Scalable Go backend architecture",
+      // something about api design
+      "API design and implementation",
+      "High-performance ScyllaDB modeling",
+      "AI-powered lead scoring pipeline",
+    ],
+    sections: [],
+    features: [
+      "Multi-tiered scrapers",
+      "Redis-based caching layer",
+      "Real-time enrichment",
     ],
   },
 };
@@ -462,7 +401,7 @@ export default async function ProjectPage({
 
         {/* Header */}
         <div className="space-y-6">
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h1 className="text-4xl md:text-5xl font-bold text-balance">
               {project.title}
             </h1>
@@ -479,25 +418,12 @@ export default async function ProjectPage({
               </Badge>
             ))}
           </div>
-
-          {/* CTA Button */}
-          {project.liveUrl && (
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 text-accent-foreground rounded-lg transition-colors font-medium bg-accent hover:bg-accent/90 text-lg"
-            >
-              Visit Live Project
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          )}
         </div>
 
-        {/* Project Image/Video */}
-        <div className="rounded-lg overflow-hidden border border-border">
+        {/* Media */}
+        <div className="rounded-xl overflow-hidden border border-border bg-muted/20 p-2 md:p-3">
           {project.images ? (
-            <div className="space-y-4">
+            <div className="space-y-6">
               {project.images.map((media, index) =>
                 media.endsWith(".mp4") ? (
                   <video
@@ -516,7 +442,7 @@ export default async function ProjectPage({
                     alt={`${project.title} screenshot ${index + 1}`}
                     className="w-full rounded-lg"
                   />
-                )
+                ),
               )}
             </div>
           ) : project.image?.endsWith(".mp4") ? (
@@ -526,67 +452,133 @@ export default async function ProjectPage({
               autoPlay
               loop
               muted
-              className="w-full"
+              className="w-full rounded-lg"
             />
           ) : (
-            <img src={project.image} alt={project.title} className="w-full" />
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full rounded-lg"
+            />
           )}
         </div>
 
         {/* Description */}
-        <div className="prose prose-neutral dark:prose-invert max-w-none">
-          <p className="text-lg leading-relaxed">{project.description}</p>
-        </div>
+        <p className="text-lg leading-relaxed text-muted-foreground">
+          {project.description}
+        </p>
 
-        {/* Sections */}
-        <div className="space-y-8">
-          {project.sections.map((section, index) => (
-            <div key={index} className="space-y-4">
-              <h2 className="text-2xl font-bold">{section.title}</h2>
-              <ul className="space-y-2">
-                {section.content.map((item, itemIndex) => (
-                  <li
-                    key={itemIndex}
-                    className="text-muted-foreground leading-relaxed flex gap-3"
-                  >
-                    <span className="text-accent">•</span>
-                    <span>{item}</span>
+        {/* Bento Grid */}
+        <div className="space-y-2 pt-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Tech Stack (left) */}
+            <div className="rounded-xl border border-border/60 bg-muted/30 p-5 space-y-4 hover:shadow-sm transition-shadow">
+              <div className="flex items-center gap-2">
+                <Cpu className="w-4 h-4 text-accent" />
+                <h3 className="text-base font-semibold tracking-tight">
+                  Tech Stack
+                </h3>
+              </div>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                {project.techStack.map((tech, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-accent mt-[-1]">•</span>
+                    <span>{tech}</span>
                   </li>
                 ))}
               </ul>
             </div>
-          ))}
+
+            {/* Key Features (center, emphasized - spans 2 cols) */}
+            <div className="rounded-xl border border-border/60 bg-muted/40 p-5 space-y-4 md:col-span-2 hover:shadow-sm transition-shadow">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-accent" />
+                <h3 className="text-base font-semibold tracking-tight">
+                  Key Attributes
+                </h3>
+              </div>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                {project.keyFeatures.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-accent mt-[-1]">•</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Dev Process (spans 2 cols) */}
+            <div className="md:col-span-2 rounded-xl border border-border/60 bg-muted/20 p-5 space-y-4 hover:shadow-sm transition-shadow">
+              <div className="flex items-center gap-2">
+                <Wrench className="w-4 h-4 text-accent" />
+                <h3 className="text-base font-semibold tracking-tight">
+                  Development Process
+                </h3>
+              </div>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                {project.devProcess.map((step, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-accent mt-[-1]">•</span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Core Features (spans 1 col) */}
+            {project.features && project.features.length > 0 && (
+              <div className="rounded-xl border border-border/60 bg-muted/30 p-5 space-y-4 hover:shadow-sm transition-shadow">
+                <div className="flex items-center gap-2">
+                  <Star className="w-4 h-4 text-accent" />
+                  <h3 className="text-base font-semibold tracking-tight">
+                    Core Features
+                  </h3>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  {project.features.slice(0, 5).map((feature, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-accent mt-[-1]">•</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* Core Features */}
-        {project.features && (
-          <div className="space-y-4 p-6 rounded-lg border border-border bg-muted/30">
-            <h2 className="text-2xl font-bold">Core Features</h2>
-            <ul className="space-y-2">
-              {project.features.map((feature, index) => (
-                <li
-                  key={index}
-                  className="text-muted-foreground leading-relaxed flex gap-3"
-                >
-                  <span className="text-accent">•</span>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
+        {/* Additional Sections (if any) */}
+        {project.sections.length > 0 && (
+          <div className="space-y-10 pt-4">
+            {project.sections.map((section, index) => (
+              <div key={index} className="space-y-4">
+                <h2 className="text-xl font-bold">{section.title}</h2>
+                <ul className="space-y-2">
+                  {section.content.map((item, itemIndex) => (
+                    <li
+                      key={itemIndex}
+                      className="text-muted-foreground leading-relaxed flex gap-3"
+                    >
+                      <span className="text-accent">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         )}
 
-        {/* CTA Button Bottom */}
+        {/* Bottom CTA */}
         {project.liveUrl && (
-          <div className="flex justify-center pt-8">
+          <div className="flex justify-center pt-6">
             <a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 text-accent-foreground rounded-lg transition-colors font-medium bg-accent hover:bg-accent/90 text-lg"
             >
-              Visit Live Project
-              <ExternalLink className="w-4 h-4" />
+              Check It Out <ExternalLink className="w-4 h-4" />
             </a>
           </div>
         )}

@@ -7,7 +7,7 @@ export function Hero() {
     <section className="space-y-6">
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <h1 className="text-4xl font-bold text-balance">{"Hassan Mango"}</h1>
+          <h1 className="text-4xl font-bold text-balance ">{"Hassan Mango"}</h1>
         </div>
         <p className="text-muted-foreground text-lg">
           🇮🇹|🇯🇴 forward deployed engineer & solutions architect{" "}
@@ -27,17 +27,17 @@ export function Hero() {
 
       <p className="text-foreground/90 leading-relaxed text-pretty max-w-2xl whitespace-pre-line">
         {
-          "I'm a Knox College Men's Soccer Alumni with a B.S. in Computer Science and a minor in Finance."
+          "  Knox College Men’s Soccer alum — B.S. in Computer Science, minor in Finance."
         }
       </p>
       <p className="text-foreground/90 leading-relaxed text-pretty max-w-2xl whitespace-pre-line">
-        I enjoy building scalable software solutions and exploring the latest in
-        AI technologies. Ranked 4th globally on Coding Kattis for my solution to
-        DragonMaid.py & I'm working on my leetcode skills in{" "}
+        I build scalable software and AI driven projects. Ranked 4th globally on
+        Coding Kattis for my solution to DragonMaid.py, currently sharpening my
+        skills in{" "}
         <a href="https://golang.org" target="_blank">
           <svg
             viewBox="0 0 207 78"
-            className="inline w-8 h-8 align-middle mt-auto text-foreground group-hover:text-accent transition-colors"
+            className="inline w-6 h-6 align-middle mt-auto text-foreground group-hover:text-accent transition-colors -translate-y-px"
           >
             <g fill="currentColor" fillRule="evenodd">
               <path d="m16.2 24.1c-.4 0-.5-.2-.3-.5l2.1-2.7c.2-.3.7-.5 1.1-.5h35.7c.4 0 .5.3.3.6l-1.7 2.6c-.2.3-.7.6-1 .6z" />
@@ -57,31 +57,11 @@ export function Hero() {
 
       <p>
         Aside from coding, my hobbies are going on food tours, working out,
-        mixing music 🕺🏻 and hitting insane knuckleballs. Below is one of my best
-        golazos to date!
+        mixing music 🕺🏻 and hitting insane knuckleballs. Here's one of my
+        favorite goals
       </p>
 
       <div className="space-y-2">
-        <p className="text-sm text-muted-foreground">
-          currently tinkering with:
-        </p>
-        <div className="flex flex-wrap gap-2">
-          <Badge variant="secondary">typescript</Badge>
-          <Badge variant="secondary">javascript</Badge>
-          <Badge variant="secondary">react</Badge>
-          <Badge variant="secondary">next.js</Badge>
-          <Badge variant="secondary">tailwindcss</Badge>
-          <Badge variant="secondary">postgresql</Badge>
-          <Badge variant="secondary">react native</Badge>
-          <Badge variant="secondary">expo go</Badge>
-          <Badge variant="secondary">node.js</Badge>
-          <Badge variant="secondary">python</Badge>
-          <Badge variant="secondary">golang</Badge>
-          <Badge variant="secondary">rust</Badge>
-          <Badge variant="secondary">mcps</Badge>
-          <Badge variant="secondary">claude</Badge>
-          <Badge variant="secondary">railway</Badge>
-        </div>
         <div>
           {/* fix mp4 on mobile, let it autoplay and make it slightly bigger on mobile  */}
           <video

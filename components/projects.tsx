@@ -1,200 +1,93 @@
 import { Badge } from "@/components/ui/badge";
-import { url } from "inspector";
 import { ArrowUpRight, Github } from "lucide-react";
 import Link from "next/link";
-import { title } from "process";
+import {
+  highlightProjects as defaultHighlights,
+  otherProjects as defaultOthers,
+} from "@/lib/data";
 
-const highlightProjects = [
-  {
-    title: "LeadSouq",
-    description:
-      "LeadSouq is a lead generation platform that helps businesses find and connect with potential customers.",
-    tags: [
-      "golang",
-      "typescript",
-      "nextjs",
-      "railway",
-      "scylladb",
-      "redis",
-      "tailwindcss",
-      "framer-motion",
-    ],
-    url: "/projects/leadsouq",
-  },
+interface ProjectsProps {
+  variant?: "default" | "grid";
+  className?: string;
+  highlights?: typeof defaultHighlights;
+  others?: typeof defaultOthers;
+}
 
-  {
-    title: "Global Countries Quiz",
-    description:
-      "Can you name all the countries in the world? Test your geography knowledge with this interactive quiz!",
-    tags: [
-      "react",
-      "typescript",
-      "nextjs",
-      "railway",
-      "postgresql",
-      "tailwindcss",
-      "framer-motion",
-    ],
-    url: "/projects/global-countries-quiz",
-  },
-  {
-    title: "N8N Leads Scraper",
-    description:
-      "1000 Free Leads/Month - Automated lead generation system built with N8N workflows",
-    tags: [
-      "node.js",
-      "http",
-      "n8n",
-      "sheets",
-      "automation",
-      "scraping",
-      "rapid-apis",
-      "google-maps",
-    ],
-    url: "/projects/n8n-leads-scraper",
-  },
-  {
-    title: "MarketFlow",
-    description: "Discord bot for financial market analysis + SEC insights",
-    tags: [
-      "golang",
-      "python",
-      "discord",
-      "openai",
-      "deepseek",
-      "edgar API",
-      "alpaca",
-    ],
-    url: "/projects/marketflow",
-  },
-  {
-    title: "Trump GPT",
-    description:
-      "AI chatbot using finetuned LLM to emulate conversational style",
-    tags: [
-      "$170K ATH marketcap",
-      "solana",
-      "memecoin",
-      "machine learning",
-      "ai finetuning",
-      "react",
-    ],
-    url: "/projects/trump-gpt",
-  },
-  {
-    title: "Chat with PDFs",
-    description: "Interactive PDF chatbot using OpenAI API for document Q&A",
-    tags: [
-      "typescript",
-      "pinecone",
-      "role-based auth",
-      "pdf parsing",
-      "framer-motion",
-      "tailwindcss",
-    ],
-    url: "/projects/chat-with-pdfs",
-    github: "https://github.com/illyangz/chat-with-pdf",
-  },
-  {
-    title: "Rusty Gas Prices",
-    description:
-      "Gas price monitoring and analysis system with location-based data retrieval, price trends visualization, and pattern detection across US cities",
-    tags: ["rust", "graphql", "reqwest", "serde", "tokio", "data analysis"],
-    url: "/projects/rusty-gas-prices",
-  },
-];
+export function Projects({
+  variant = "default",
+  className,
+  highlights = defaultHighlights,
+  others = defaultOthers,
+}: ProjectsProps) {
+  if (variant === "grid") {
+    return (
+      <section id="projects" className={`space-y-12 ${className}`}>
+        <div className="space-y-2 text-center mb-16">
+          <h2 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl">
+            Selected Works
+          </h2>
+          <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto">
+            A curated collection of scalable systems, AI experiments, and
+            full-stack applications.
+          </p>
+        </div>
 
-const otherProjects = [
-  {
-    title: "JB Painting Website",
-    description: "Professional painting service website for JB Painting",
-    tags: [
-      "javascript",
-      "typescript",
-      "react",
-      "tailwindcss",
-      "railway",
-      "postgresql",
-    ],
-    url: "https://jbpainting.us/",
-  },
-  {
-    title: "XBotter CLI",
-    description: "AI Twitter bot command-line interface with Twitter Auth V2",
-    tags: ["node.js", "typescript", "javascript", "twitter auth v2"],
-    github: "https://github.com/illyangz/xbotter",
-    url: "https://xbotter.vercel.app",
-  },
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {highlights.map((project, index) => (
+            <div
+              key={index}
+              className={`group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 hover:border-white/20 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/5 ${
+                index === 0 || index === 3 ? "md:col-span-2" : ""
+              }`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-  {
-    title: "Solana Token Aggregator CLI",
-    description:
-      "Command-line tool for aggregating Solana token launches and metrics",
-    tags: [
-      "golang",
-      "typescript",
-      "solana blockchain",
-      "rest apis",
-      "websockets",
-    ],
-  },
+              <div className="relative z-10 h-full flex flex-col justify-between space-y-8">
+                <div className="space-y-4">
+                  <div className="flex justify-between items-start">
+                    <h3 className="text-2xl font-bold tracking-tight">
+                      {project.title}
+                    </h3>
+                    <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">
+                      {project.url && (
+                        <Link
+                          href={project.url}
+                          className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                        >
+                          <ArrowUpRight className="w-5 h-5" />
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed max-w-md">
+                    {project.description}
+                  </p>
+                </div>
 
-  //i want to add a link instead of the github for this one
-  {
-    title: "Nitr0 Typer",
-    description:
-      "a lightweight and fun typing test game designed to help users improve their typing speed and accuracy",
-    tags: ["react", "typescript", "vite", "tailwindcss"],
-    url: "https://nitr0-typer.vercel.app/",
-  },
-  {
-    title: "CSV Parser",
-    description: "Web-based CSV grapher and parser with data visualization",
-    tags: ["react", "javascript", "nextjs", "tailwindcss", "vercel"],
-    url: "https://csv-interpreter.vercel.app/",
-  },
-  {
-    title: "Finetuning an LLM",
-    description:
-      "Custom language model training and optimization for object detection in images",
-    tags: ["python", "ai", "machine learning", "llm", "jupyter"],
-    github: "https://github.com/illyangz/cs-at-knox",
-  },
-  {
-    title: "Pacman AI",
-    description:
-      "UC Berkley AI capstone project based on implementing game strategies with graph search algorithms",
-    tags: [
-      "python",
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.slice(0, 4).map((tag, i) => (
+                    <Badge
+                      key={i}
+                      variant="secondary"
+                      className="bg-white/5 hover:bg-white/10 text-xs border-transparent"
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
+                  {project.tags.length > 4 && (
+                    <Badge variant="secondary" className="bg-white/5 text-xs">
+                      +{project.tags.length - 4}
+                    </Badge>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
 
-      "search",
-      "reinforcement learning",
-      "bayes nets",
-      "markov",
-      "q-learning",
-    ],
-    url: "https://inst.eecs.berkeley.edu/~cs188/fa24/projects/",
-  },
-  {
-    title: "LinkTree Clone",
-    description:
-      "Personal link aggregation platform similar to LinkTree but my rendition with multiple themes and language support",
-    tags: ["react", "nextjs", "tailwindcss", "typescript", "railway"],
-    url: "https://hassanmango-links.up.railway.app",
-  },
-  {
-    title: "TuneMate",
-    description: "Music based dating app prototype",
-    tags: ["react native", "expo", "javascript"],
-  },
-  {
-    title: "TaskMaster",
-    description: "Marketplace for outsourcing chores and tasks",
-    tags: ["react", "firebase", "javascript"],
-  },
-];
-
-export function Projects() {
   return (
     <section id="projects" className="space-y-8">
       <h2 className="text-2xl font-bold">selected projects & tools</h2>
@@ -203,7 +96,7 @@ export function Projects() {
       <div className="space-y-4">
         <h3 className="text-sm text-accent font-medium">highlights</h3>
         <div className="space-y-6">
-          {highlightProjects.map((project, index) => (
+          {highlights.map((project, index) => (
             <div
               key={index}
               className="space-y-3 pb-6 border-b border-border last:border-0"
@@ -246,7 +139,7 @@ export function Projects() {
           other projects
         </h3>
         <div className="grid gap-4 md:grid-cols-2">
-          {otherProjects.map((project, index) => (
+          {others.map((project, index) => (
             <div
               key={index}
               className="space-y-3 p-4 rounded-lg border border-border hover:border-muted-foreground transition-colors"
@@ -286,6 +179,28 @@ export function Projects() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="space-y-2">
+        <p className="text-sm text-muted-foreground">
+          currently tinkering with:
+        </p>
+        <div className="flex flex-wrap gap-2">
+          <Badge variant="secondary">typescript</Badge>
+          <Badge variant="secondary">javascript</Badge>
+          <Badge variant="secondary">react</Badge>
+          <Badge variant="secondary">next.js</Badge>
+          <Badge variant="secondary">tailwindcss</Badge>
+          <Badge variant="secondary">postgresql</Badge>
+          <Badge variant="secondary">react native</Badge>
+          <Badge variant="secondary">expo go</Badge>
+          <Badge variant="secondary">node.js</Badge>
+          <Badge variant="secondary">python</Badge>
+          <Badge variant="secondary">golang</Badge>
+          <Badge variant="secondary">rust</Badge>
+          <Badge variant="secondary">mcps</Badge>
+          <Badge variant="secondary">claude</Badge>
+          <Badge variant="secondary">railway</Badge>
         </div>
       </div>
     </section>

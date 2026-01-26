@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, Moon, Sun, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { PixelTransition } from "./pixel-transition";
+import { ThemeTransition } from "./theme-transition";
 
 export function Navigation() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -33,7 +33,6 @@ export function Navigation() {
   };
 
   const handleTransitionMidpoint = () => {
-    // Switch theme when pixels fully cover the screen
     setTheme(targetTheme);
     document.documentElement.classList.toggle("dark", targetTheme === "dark");
     localStorage.setItem("theme", targetTheme);
@@ -49,7 +48,6 @@ export function Navigation() {
   ) => {
     e.preventDefault();
 
-    // Special case for home - scroll to top or navigate to /
     if (sectionId === "top") {
       if (pathname === "/") {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -60,13 +58,11 @@ export function Navigation() {
     }
 
     if (pathname === "/") {
-      // If we're on homepage, just scroll to the section (no hash in URL)
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      // If we're on a different page, use full page navigation to ensure hash is preserved
       window.location.href = `/#${sectionId}`;
     }
   };
@@ -174,6 +170,7 @@ export function Navigation() {
               <Moon className="w-4 h-4" />
             )}
           </button>
+
           {socialLinks.map((link) => (
             <a
               key={link.href}
@@ -244,13 +241,11 @@ export function Navigation() {
         )}
       </AnimatePresence>
 
-      <PixelTransition
+      <ThemeTransition
         isAnimating={isTransitioning}
         onMidpoint={handleTransitionMidpoint}
         onComplete={handleTransitionComplete}
         targetTheme={targetTheme}
-        gridSize={7}
-        duration={0.4}
       />
     </nav>
   );
