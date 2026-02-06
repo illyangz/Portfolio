@@ -323,7 +323,7 @@ const projectsData = {
     subtitle: "AI-Powered B2B Lead Generation Platform",
     description:
       "LeadSouq is an AI-driven B2B lead generation platform that provides businesses with access to over 34 million business profiles.",
-    image: "/leadsouqdemo-compressed.mp4",
+    image: "https://pub-891f5cba39a945e29e40db2d945c2147.r2.dev/leadsouqdemo-compressed.mp4",
     images: undefined,
     tags: [
       "golang",

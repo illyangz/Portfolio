@@ -41,6 +41,7 @@ yarn-error.log*
 
 # large media files (hosted on R2)
 *.mp3
+public/leadsouqdemo-compressed.mp4
 
 # typescript
 *.tsbuildinfo
