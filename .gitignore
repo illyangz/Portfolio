@@ -36,6 +36,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# cloudflare
+.open-next
+
+# large media files (hosted on R2)
+*.mp3
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -35,14 +35,14 @@ const tracks: Track[] = [
   {
     title: "Boogie Disco Groove",
     subtitle: "Click here for SoundCloud playlist",
-    src: "/Industrial Boogie Disco Groove.mp3",
+    src: "https://pub-891f5cba39a945e29e40db2d945c2147.r2.dev/Industrial%20Boogie%20Disco%20Groove.mp3",
     date: "2026-01-20",
     link: "https://soundcloud.com/yangzog/sets/sajjjil-v2?si=20b10ec890fb49089578f8bd402441d7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   },
   {
     title: "Aghani",
     subtitle: "Click here to listen on SoundCloud",
-    src: "/Aghani.mp3",
+    src: "https://pub-891f5cba39a945e29e40db2d945c2147.r2.dev/Aghani.mp3",
     link: "https://soundcloud.com/yangzog/aghani",
     date: "2025-11-15",
   },
