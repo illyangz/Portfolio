@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   ArrowLeft,
   ExternalLink,
@@ -372,6 +373,37 @@ export function generateStaticParams() {
   return Object.keys(projectsData).map((slug) => ({
     slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projectsData[slug as keyof typeof projectsData];
+
+  if (!project) return {};
+
+  return {
+    title: project.title,
+    description: project.description,
+    keywords: project.tags,
+    alternates: {
+      canonical: `/projects/${slug}`,
+    },
+    openGraph: {
+      title: `${project.title} — Hassan Mango`,
+      description: project.description,
+      url: `/projects/${slug}`,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — Hassan Mango`,
+      description: project.description,
+    },
+  };
 }
 
 export default async function ProjectPage({
