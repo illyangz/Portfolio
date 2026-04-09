@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 const projects = [
   "leadsouq",
   "n8n-leads-scraper",
