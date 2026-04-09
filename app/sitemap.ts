@@ -10,6 +10,9 @@ const projects = [
   "marketflow",
   "rusty-gas-prices",
   "global-countries-quiz",
+  "camprep",
+  "prairie-shields-tech",
+  "jb-painting",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
