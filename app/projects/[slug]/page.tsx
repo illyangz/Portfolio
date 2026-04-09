@@ -352,7 +352,7 @@ const projectsData = {
       "tailwindcss",
       "framer-motion",
     ],
-    liveUrl: "https://globalcountriesquiz.up.railway.app/",
+    liveUrl: "https://guessthecountry.pages.dev/",
     techStack: [
       "React & Next.js",
       "TypeScript",
