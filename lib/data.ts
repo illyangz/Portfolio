@@ -1,5 +1,19 @@
 export const highlightProjects = [
   {
+    title: "Prairie Shields Technology Website",
+    description:
+      "Business platform offering IT solutions for development, data analytics, seo, cybersecurity, and more.",
+    tags: [
+      "astro",
+      "typescript",
+      "cloudflare",
+      "microsoft teams",
+      "tailwindcss",
+      "framer-motion",
+    ],
+    url: "/projects/prairie-shields-technology",
+  },
+  {
     title: "LeadSouq",
     description:
       "LeadSouq is a lead generation platform that helps businesses find and connect with potential customers.",
@@ -100,8 +114,23 @@ export const highlightProjects = [
 
 export const otherProjects = [
   {
+    title: "CamPrep",
+    description:
+      "Free tool to plan and visualize security camera placements with interactive field-of-view analysis, range indicators and satellite map tools. Perfect for pre-install site surveys",
+    tags: [
+      "astro",
+      "typescript",
+      "react",
+      "cloudflare",
+      "openstreetmap",
+      "google maps api",
+    ],
+    url: "https://www.prairieshieldstech.com/tools",
+  },
+  {
     title: "JB Painting Website",
-    description: "Professional painting service website for JB Painting",
+    description:
+      "Professional custom built painting service website for JB Painting. Showcasing their services and expertise",
     tags: [
       "javascript",
       "typescript",

@@ -14,6 +14,67 @@ import { Navigation } from "@/components/navigation";
 import { Contact } from "@/components/contact";
 
 const projectsData = {
+  "prairie-shields-technology": {
+    title: "Prairie Shields Technology",
+    subtitle:
+      "Business platform offering IT solutions for development, data analytics, seo, cybersecurity, and more.",
+    description:
+      "Built initially using Next.js, then I refactored the entire platform to use Astro and Tailwind CSS. The platform is designed to provide a seamless user experience with a focus on performance and scalability.",
+    image: "https://prairieshieldstech.com/logo-dark.svg",
+    images: undefined,
+    tags: [
+      "node.js",
+      "typescript",
+      "astro",
+      "tailwindcss",
+      "react",
+      "microsoft teams",
+    ],
+    liveUrl: "https://prairieshieldstech.com",
+    techStack: [
+      "astro",
+      "microsoft teams",
+      "node.js",
+      "react",
+      "typescript",
+      "tailwindcss",
+    ],
+    keyFeatures: [
+      "Backlinks for SEO optimization",
+      "Beautifully designed user interface",
+      "Blog posts for updates and insights",
+      "Custom built chatbot for customer support",
+      "Responsive design for all devices with SVG icons and animations",
+      "Seamlessly integrated with Microsoft Teams",
+    ],
+    devProcess: [
+      "Initial setup was with Next.js and Vercel",
+      "Opted out for an Astro and Cloudflare Pages build",
+      "Webhook enabled for real-time updates whenever a client fills out the form",
+      "Dynamic pricing based on user needs",
+    ],
+    sections: [
+      {
+        title: "What I learned from this project",
+        content: [
+          "React + Astro build vs Next.js + Vercel.",
+          "Astro is a lot like React when it comes to Islands and Components.",
+          "Astro Islands are a lot like React Components.",
+          "Animating Astro Islands with Framer Motion.",
+          "Optimizing Astro Islands for SEO and Performance.",
+          "Adding an LLMS.txt file for AI models to improve SEO.",
+          "Building a custom AI model for client support.",
+          "Integrating Microsoft Teams with Astro.",
+        ],
+      },
+    ],
+    features: [
+      "Search engine optimized",
+      "Webhooks for form submissions",
+      "AI Chat Widget",
+      ,
+    ],
+  },
   "n8n-leads-scraper": {
     title: "N8N Leads Scraper",
     subtitle: "Automated Google Maps Lead Scraping & Enrichment",
@@ -324,7 +385,8 @@ const projectsData = {
     subtitle: "AI-Powered B2B Lead Generation Platform",
     description:
       "LeadSouq is an AI-driven B2B lead generation platform that provides businesses with access to over 34 million business profiles.",
-    image: "https://pub-891f5cba39a945e29e40db2d945c2147.r2.dev/leadsouqdemo-compressed.mp4",
+    image:
+      "https://pub-891f5cba39a945e29e40db2d945c2147.r2.dev/leadsouqdemo-compressed.mp4",
     images: undefined,
     tags: [
       "golang",
