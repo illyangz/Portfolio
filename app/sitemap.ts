@@ -11,6 +11,7 @@ const projects = [
   "rusty-gas-prices",
   "global-countries-quiz",
   "camprep",
+  "soundcloud-likes-viewer",
   "prairie-shields-tech",
   "jb-painting",
 ];

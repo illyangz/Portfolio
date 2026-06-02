@@ -114,6 +114,13 @@ export const highlightProjects = [
 
 export const otherProjects = [
   {
+    title: "SoundCloud Likes Viewer",
+    description:
+      "Browse, search, preview all your SoundCloud liked tracks in a local web app. I have over 5,000 liked songs so scrolling past the first 2,000 would make things slow and lag. I wanted to make a simple solution with infinite scrolling",
+    tags: ["javascript", "http", "html", "node.js", "soundcloud-api"],
+    url: "https://github.com/illyangz/soundcloud-likes-viewer/tree/main",
+  },
+  {
     title: "CamPrep",
     description:
       "Free tool to plan and visualize security camera placements with interactive field-of-view analysis, range indicators and satellite map tools. Perfect for pre-install site surveys",
@@ -126,6 +133,39 @@ export const otherProjects = [
       "google maps api",
     ],
     url: "https://www.prairieshieldstech.com/tools",
+  },
+  {
+    title: "GatSwap",
+    description:
+      "Home to every swap handled legally through a licensed FFL dealer. Checkout listings, negotiate deals, and connect with a nationwide community",
+    tags: [
+      "react",
+      "typescript",
+      "next.js",
+      "golang",
+      "react native",
+      "postgresql",
+      "neon-db",
+      "vite",
+      "resend",
+      "framer-motion",
+    ],
+    url: "https://gatswap.com",
+  },
+  {
+    title: "Take The Fight Academy",
+    description:
+      "Custom built website for an MMA Legend - Eric Showtime Shelton. Showcasing the academy and gym that he runs with his team",
+    tags: [
+      "typescript",
+      "node.js",
+      "framer-motion",
+      "react",
+      "neon postgresql",
+      "square",
+      "stripe",
+    ],
+    url: "https://takethefightacademy.com",
   },
   {
     title: "JB Painting Website",
