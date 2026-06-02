@@ -241,7 +241,7 @@ export const otherProjects = [
     description:
       "Personal link aggregation platform similar to LinkTree but my rendition with multiple themes and language support",
     tags: ["react", "nextjs", "tailwindcss", "typescript", "railway"],
-    url: "https://hassanmango-links.up.railway.app",
+    url: "https://links.hassanmango.website/",
   },
   {
     title: "TuneMate",
