@@ -14,6 +14,44 @@ import { Navigation } from "@/components/navigation";
 import { Contact } from "@/components/contact";
 
 const projectsData = {
+  "ameja-work": {
+    title: "AMEJA Freelancing",
+    subtitle: "Arab & Middle Eastern Journalists Association",
+    description:
+      "Designed new landing page and email templates. For the purpose of curating a more aesthetic user interface and experience that matches the profile of the association.",
+    image: "/ameja-landing.jpeg",
+    images: ["/Group 10.jpg", "/Group 17.jpg", "/Group 18.jpg"],
+    tags: ["landing page", "website design"],
+    liveUrl: "https://ameja.org",
+    techStack: ["adobe illustrator", "figma", "typescript", "tailwindcss"],
+    keyFeatures: [
+      "Custom made designs and patterns made available by my fellow designer, Aïda",
+      "Donation collection routes",
+      "User sign-in and sign up",
+    ],
+    devProcess: [
+      "The first task was rebranding email templates using AMEJA custom patterns and color palettes.",
+      "Once we figured the email templates out, I began designing a skeleton template for how the web UI/UX will display.",
+      "Landing page was based on journalism websites similar to NY Times and other big associations.",
+      "I ensured that the landing page is available and responsive across all screen sizes. ",
+    ],
+    sections: [
+      {
+        title: "How this project really played out?",
+        content: [
+          "Aïda and I were meeting frequently to discuss different branding elements that needed to be present.",
+          "She designed branded elements and patterns for me to utilize, that matched the new AMEJA color palette.",
+          "Everything was built and designed through Figma.",
+          "I took the figma design and built a react version of it to demo the numerous pages living on the website.",
+          "Once every design element was agreed on and finalized, I exported my design files from figma to Aïda and the AMEJA team; the website is live now!",
+        ],
+      },
+    ],
+    features: [
+      "We wanted to give AMEJA a rebrand to make their digital experience feel more catered towards journalists, while also paying homage to the essence of their brand.",
+    ],
+  },
+
   "prairie-shields-technology": {
     title: "Prairie Shields Technology",
     subtitle:
@@ -515,9 +553,25 @@ export default async function ProjectPage({
         </div>
 
         {/* Media */}
-        <div className="rounded-xl overflow-hidden border border-border bg-muted/20 p-2 md:p-3">
-          {project.images ? (
-            <div className="space-y-6">
+        <div className="rounded-xl overflow-hidden border border-border bg-muted/20 p-2 md:p-3 space-y-3">
+          {project.image?.endsWith(".mp4") ? (
+            <video
+              src={project.image}
+              controls
+              autoPlay
+              loop
+              muted
+              className="w-full rounded-lg"
+            />
+          ) : (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full rounded-lg"
+            />
+          )}
+          {project.images && (
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {project.images.map((media, index) =>
                 media.endsWith(".mp4") ? (
                   <video
@@ -534,26 +588,11 @@ export default async function ProjectPage({
                     key={index}
                     src={media}
                     alt={`${project.title} screenshot ${index + 1}`}
-                    className="w-full rounded-lg"
+                    className="w-full rounded-lg object-cover"
                   />
                 ),
               )}
             </div>
-          ) : project.image?.endsWith(".mp4") ? (
-            <video
-              src={project.image}
-              controls
-              autoPlay
-              loop
-              muted
-              className="w-full rounded-lg"
-            />
-          ) : (
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full rounded-lg"
-            />
           )}
         </div>
 

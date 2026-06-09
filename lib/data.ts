@@ -14,6 +14,13 @@ export const highlightProjects = [
     url: "/projects/prairie-shields-technology",
   },
   {
+    title: "AMEJA Freelancing",
+    description:
+      "AMEJA is the Arab & Middle Eastern Journalists Association. With the help of a fellow designer, I drafted email templates and built a new landing page templete for AMEJA to use.",
+    tags: ["adobe illustrator", "figma", "typescript", "tailwindcss"],
+    url: "/projects/ameja-work",
+  },
+  {
     title: "LeadSouq",
     description:
       "LeadSouq is a lead generation platform that helps businesses find and connect with potential customers.",
