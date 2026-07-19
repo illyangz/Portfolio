@@ -1,5 +1,19 @@
 export const highlightProjects = [
   {
+    title: "Focal",
+    description:
+      "Focal records your screen and automatically zooms in on your clicks — no manual keyframing, no editing skills required. Just record, and it looks produced.",
+    tags: [
+      "javascript",
+      "html",
+      "cloudflare",
+      "apple SDK",
+      "windows SDK",
+      "react",
+    ],
+    url: "/projects/focal",
+  },
+  {
     title: "Prairie Shields Technology Website",
     description:
       "Business platform offering IT solutions for development, data analytics, seo, cybersecurity, and more.",
