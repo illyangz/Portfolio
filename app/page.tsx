@@ -5,6 +5,7 @@ import { Hero } from "@/components/hero"
 import { Work } from "@/components/work"
 import { Projects } from "@/components/projects"
 import { Contact } from "@/components/contact"
+import { ScrollReveal } from "@/components/scroll-reveal"
 import { useEffect } from "react"
 
 export default function Home() {
@@ -28,9 +29,15 @@ export default function Home() {
       <Navigation />
       <main className="max-w-3xl mx-auto px-6 py-12 space-y-24">
         <Hero />
-        <Work />
-        <Projects />
-        <Contact />
+        <ScrollReveal>
+          <Work />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Projects />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Contact />
+        </ScrollReveal>
       </main>
     </div>
   )

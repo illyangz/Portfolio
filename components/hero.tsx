@@ -1,15 +1,42 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 export function Hero() {
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const items = el.querySelectorAll<HTMLElement>(".hero-item");
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        items,
+        { opacity: 0, y: 16 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 1.1,
+          ease: "power2.out",
+        }
+      );
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="space-y-6">
+    <section ref={ref} className="space-y-6">
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <h1 className="text-4xl font-bold text-balance ">{"Hassan Mango"}</h1>
+          <h1 className="hero-item text-4xl font-bold text-balance ">{"Hassan Mango"}</h1>
         </div>
-        <p className="text-muted-foreground text-lg">
+        <p className="hero-item text-muted-foreground text-lg">
           🇮🇹|🇯🇴 forward deployed engineer & solutions architect{" "}
           <a
             className="hover:underline hover:text-accent bitcount-prop-single-pst"
@@ -19,18 +46,18 @@ export function Hero() {
             @PST
           </a>
         </p>
-        <p className="text-muted-foreground text-sm">
+        <p className="hero-item text-muted-foreground text-sm">
           {/* i want to put another way to  say active on the web not based in spain*/}
           usually active on the web 🌐
         </p>
       </div>
 
-      <p className="text-foreground/90 leading-relaxed text-pretty max-w-2xl whitespace-pre-line">
+      <p className="hero-item text-foreground/90 leading-relaxed text-pretty max-w-2xl whitespace-pre-line">
         {
           "  Knox College Men’s Soccer alum — B.S. in Computer Science, minor in Finance."
         }
       </p>
-      <p className="text-foreground/90 leading-relaxed text-pretty max-w-2xl whitespace-pre-line">
+      <p className="hero-item text-foreground/90 leading-relaxed text-pretty max-w-2xl whitespace-pre-line">
         I build scalable software and AI driven projects. Ranked 4th globally on
         Coding Kattis for my solution to DragonMaid.py, currently sharpening my
         skills in{" "}
@@ -55,13 +82,13 @@ export function Hero() {
         </a>
       </p>
 
-      <p>
+      <p className="hero-item">
         Aside from coding, my hobbies are going on food tours, working out,
         mixing music 🕺🏻 and hitting insane knuckleballs. Here's one of my
         favorite goals
       </p>
 
-      <div className="space-y-2">
+      <div className="hero-item space-y-2">
         <div>
           {/* fix mp4 on mobile, let it autoplay and make it slightly bigger on mobile  */}
           <video
