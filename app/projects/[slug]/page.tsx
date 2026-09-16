@@ -14,6 +14,73 @@ import { Navigation } from "@/components/navigation";
 import { Contact } from "@/components/contact";
 
 const projectsData = {
+  "bondi-press": {
+    title: "Bondi Press",
+    subtitle: "A GUI to convert Microsoft Publisher documents to PDF or any other format.",
+    description: "Bondi Press is a GUI tool that converts Microsoft Publisher documents to PDF or any other format. It uses the Microsoft Publisher API to extract the document content and convert it to PDF using the PDFSharp library & LibreOffice.",
+    image: "/bondi-press.png",
+    images: [],
+    tags: [],
+    liveUrl: "",
+    techStack: ["golang", "typescript", "tailwindcss", "libreOffice", "microsoft publisher", "wails"],
+    keyFeatures: [
+      "Converts Microsoft Publisher documents to PDF",
+      "Supports multiple output formats",
+      "Uses the Microsoft Publisher API",
+      "Converts using PDFSharp and LibreOffice",
+    ],
+    devProcess: [
+      "Shelled out to the Microsoft Publisher COM API to extract document content from every format back to Publisher 98.",
+      "Wrapped the conversion pipeline in Go, using PDFSharp and LibreOffice to export to PDF, Word, or images.",
+      "Built the UI with Wails, Go + TypeScript, Tailwind CSS — a frameless desktop widget that stays out of the way.",
+      "Kept it fully local and free: nothing to install beyond the app, nothing to host, nothing to pay for.",
+    ],
+    sections: [
+      {
+        title: "The product",
+        content: "A tiny widget. A serious engine. Bondi Press keeps out of your way through a fast, frameless utility that lives on your desktop and converts your whole archive in seconds.",
+      },
+    ],
+    features: [
+      "Converts Microsoft Publisher documents to PDF",
+      "Supports multiple output formats",
+      "Uses the Microsoft Publisher API",
+      "Converts using PDFSharp and LibreOffice",
+      "Converts Publisher 98-2026 documents",
+    ],
+  },
+  "open-dj": {
+    title: "OpenDJ",
+    subtitle: "Built for DJs who want speed and control, not another cloud platform.",
+    description: "OpenDJ lets you download, organize, and prepare tracks for your DJ sets. No accounts. No subscriptions. Your library stays on your machine so cloud sync and community are opt-in, anonymous, and never required.",
+    image: "https://illyangz.github.io/open-dj/opendj-pic.png",
+    images: [],
+    tags: ["open source", "music", "dj", "record", "tracks", "download", "organize", "prepare", "export"],
+    liveUrl: "https://illyangz.github.io/open-dj/",
+    techStack: ["rust", "react", "typescript", "tauri", "tailwindcss", "vite", "zustand"],
+    keyFeatures: [
+      "OpenDJ is a desktop app for downloading, tagging, and organizing tracks for DJ sets. Think of it as a local-first preparation tool that sits between “random YouTube downloads” and your DJ software.",
+      "Download, organize, and prepare tracks for your DJ sets",
+      "No accounts or subscriptions required",
+      "OpenDJ is GPL-3.0-or-later, free forever. No premium tier, no paywalled features.",
+    ],
+    devProcess: [
+
+      "Tauri uses your system’s native webview (WebKit on macOS, WebView2 on Windows, WebKitGTK on Linux) rather than bundling Chromium. The result: smaller binaries, lower memory usage, and a native feel. The backend is Rust, utilizing a Cargo workspace with eight specialized crates.",
+      "The frontend is React 19 + TypeScript + Tailwind CSS 4, built with Vite 7 and managed by Zustand."
+    ],
+    sections: [
+      {
+        title: "Why I built OpenDJ",
+        content: ["I built OpenDJ to make it easy to download, organize, and prepare tracks for my DJ sets."],
+      },
+    ],
+    features: [
+      "Your library stays on your machine",
+      "Cross-platform support (Windows, macOS, Linux)",
+      "Real-time preview and editing",
+    ],
+},
   "focal": {
     title: "Focal App",
     subtitle: "Focal records your screen and automatically zooms in on your clicks — no manual keyframing, no editing skills required. Just record, and it looks produced.",
@@ -30,7 +97,7 @@ const projectsData = {
 
     ],
     devProcess: [
-          "I noticed most of the tools similar to Focal are either paid or not designed for screen recording. So I decided to build my own.",
+      "I noticed most of the tools similar to Focal are either paid or not designed for screen recording. So I decided to build my own.",
       "Add a webcam bubble and narrate over your recording. Voice enhancement cleans up the audio automatically on export.",
       "Pixelate passwords, emails, or anything else you don't want visible — masks track your zooms automatically.",
       "Trim, cut sections, add text slides and annotations, drop in B-roll, then style the frame — background, padding, corner radius, shadow.",,
@@ -725,17 +792,23 @@ export default async function ProjectPage({
             {project.sections.map((section, index) => (
               <div key={index} className="space-y-4">
                 <h2 className="text-xl font-bold">{section.title}</h2>
-                <ul className="space-y-2">
-                  {section.content.map((item, itemIndex) => (
-                    <li
-                      key={itemIndex}
-                      className="text-muted-foreground leading-relaxed flex gap-3"
-                    >
-                      <span className="text-accent">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                {typeof section.content === "string" ? (
+                  <p className="text-muted-foreground leading-relaxed">
+                    {section.content}
+                  </p>
+                ) : (
+                  <ul className="space-y-2">
+                    {section.content.map((item, itemIndex) => (
+                      <li
+                        key={itemIndex}
+                        className="text-muted-foreground leading-relaxed flex gap-3"
+                      >
+                        <span className="text-accent">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>

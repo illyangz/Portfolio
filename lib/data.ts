@@ -1,5 +1,26 @@
 export const highlightProjects = [
   {
+    title: "Bondi Press",
+    description: "A tiny widget. A serious engine.",
+    tags: ["golang", "typescript", "tailwindcss", "libreOffice", "microsoft publisher", "wails"],
+    url: "/projects/bondi-press",
+  },
+  {
+    title: "OpenDJ",
+    description:
+      "OpenDJ is a cross-platform DJ set preparation tool that allows you to download, organize, and prepare tracks for your DJ sets.",
+    tags: [
+      "rust",
+      "react",
+      "typescript",
+      "tauri",
+      "tailwindcss",
+      "vite",
+      "zustand",
+    ],
+    url: "/projects/open-dj",
+  },
+  {
     title: "Focal",
     description:
       "Focal records your screen and automatically zooms in on your clicks — no manual keyframing, no editing skills required. Just record, and it looks produced.",
